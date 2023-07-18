@@ -5,6 +5,10 @@ include .env
 run:
 	@go run cmd/main.go
 
+.PHONY: dc-run
+dc-run:
+	@docker-compose up --build
+
 .PHONY: migrate-create
 migrate-create:
 ifndef name
